@@ -1,7 +1,12 @@
 # Getting Started with Create React App
 
+
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
+
+# Using emotion Styled Components 
+
+Project was stylising with emotion.styled 
 
 ## Available Scripts
 
