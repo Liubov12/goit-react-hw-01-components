@@ -23,3 +23,9 @@ font-weight: 300;
 font-size: 13px;
 padding: 5px 0 5px 0;
 }`;
+
+export const Tr = styled.tr`
+  :nth-of-type(even) {
+    background-color: rgb(255, 255, 137);
+  }
+`;

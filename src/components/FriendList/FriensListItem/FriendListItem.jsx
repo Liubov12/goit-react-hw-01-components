@@ -5,7 +5,7 @@ import {
   Avatar,
   OnlineIndicator,
   FriendItemBox,
-} from './Friends.styled';
+} from './FriendListItem.styled';
 
 const FriendListItem = ({ avatar, name, isOnline }) => (
   <FriendItemBox>

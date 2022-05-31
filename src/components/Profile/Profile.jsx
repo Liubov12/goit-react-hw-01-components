@@ -11,18 +11,10 @@ import {
   Stats,
   ItemStats,
   Label,
+  Quantity,
 } from './Profile.styled';
 
-const Profile = ({
-  avatar,
-  tag,
-  username,
-  location,
-  stats,
-  followers,
-  views,
-  likes,
-}) => {
+const Profile = ({ avatar, tag, username, location, stats }) => {
   return (
     <Container>
       <Description>
@@ -31,18 +23,17 @@ const Profile = ({
         <TagName>@{tag}</TagName>
         <Location>{location}</Location>
         <Stats>
-          {stats}
           <ItemStats>
             <Label>Followers</Label>
-            <span className="quantity">{followers}</span>
+            <Quantity>{stats.followers}</Quantity>
           </ItemStats>
           <ItemStats>
             <Label>Views</Label>
-            <span className="quantity">{views}</span>
+            <Quantity>{stats.views}</Quantity>
           </ItemStats>
           <ItemStats>
             <Label>Likes</Label>
-            <span className="quantity">{likes}</span>
+            <Quantity>{stats.likes}</Quantity>
           </ItemStats>
         </Stats>
       </Description>
@@ -54,9 +45,11 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.object,
-  followers: PropTypes.number.isRequired,
-  views: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired,
+  stats: PropTypes.exact({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
 };
+
 export default Profile;

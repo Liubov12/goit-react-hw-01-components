@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container } from './Friends.styled';
-import FriendListItem from './FriendListItem';
+import { Container } from './FriendList.styled';
+import FriendListItem from './FriensListItem/FriendListItem';
 
 const FriendList = ({ friends }) => {
   return (
-    // <ul className={s.friends}>
     <Container>
       {friends.map(({ avatar, id, name, isOnline }) => (
         <FriendListItem

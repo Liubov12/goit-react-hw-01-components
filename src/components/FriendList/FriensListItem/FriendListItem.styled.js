@@ -1,12 +1,9 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.ul`
-  background: #e7f3fe;
-`;
-
 export const FriendItemBox = styled.li`
   display: flex;
   text-align: center;
+
   margin: 0% auto;
   box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.25);
   margin-top: 10px;
@@ -19,15 +16,6 @@ export const FriendName = styled.p`
   padding-left: 15px;
 `;
 
-//  export const BgColor = friends => {
-//   switch (friends.IsOnline) {
-//     case true:
-//       return 'green';
-//     default:
-//       return 'red';
-//   }
-// };
-// background: ${BgColor};
 export const OnlineIndicator = styled.span`
     width: 20px;
     background: ${props => (props.isOnline ? '#27DF16' : '#E61E3D')};
